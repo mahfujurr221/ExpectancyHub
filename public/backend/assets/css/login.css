@@ -46,7 +46,7 @@ html {
     width: 160px;
     top: -75px;
     border-radius: 50%;
-    background: #F37920;
+    background: #32a852;
     padding: 5px;
     text-align: center;
 }
@@ -58,7 +58,7 @@ html {
     top: -75px;
     right: 110px;
     border-radius: 50%;
-    background: #F37920;
+    background: #32a852;
     padding: 5px;
     text-align: center;
 }
@@ -76,7 +76,7 @@ html {
 
 .login_btn {
     width: 100%;
-    background: #F37920 !important;
+    background: #32a852 !important;
     color: white !important;
 }
 
@@ -90,7 +90,7 @@ html {
 }
 
 .input-group-text {
-    background: #F37920 !important;
+    background: #32a852 !important;
     color: white !important;
     border: 0 !important;
     border-radius: 0.25rem 0 0 0.25rem !important;
@@ -103,5 +103,5 @@ html {
 }
 
 .custom-checkbox .custom-control-input:checked~.custom-control-label::before {
-    background-color: #F37920 !important;
+    background-color: #32a852 !important;
 }

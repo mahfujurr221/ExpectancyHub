@@ -51,7 +51,7 @@
                                         </svg></a></li>
                                 <li class="last-li">
                                     <em>Get Support</em>
-                                    <a href="mailto:support@englishscanner.com">support@englishscanner.com</a>
+                                    <a href="mailto:support@expectancyhub.com">support@expectancyhub.com</a>
                                 </li>
                             </ul>
                         </div>

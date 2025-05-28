@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>English Scanner | Login</title>
+    <title>Expectancy Hub - Login</title>
     <link rel="icon" type="image/x-icon" href="{{ asset('uploads/favicon.png') }}" />
     <link href="{{ asset('backend') }}/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="{{ asset('backend') }}/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
@@ -15,7 +15,11 @@
             <div class="user_card">
                 <div class="d-flex justify-content-center">
                     <div class="brand_logo_container">
-                        <img src="{{ asset('uploads/login-logo.png') }}" class="brand_logo" alt="Logo">
+                        {{-- <img src="{{ asset('uploads/login-logo.png') }}"  --}}
+                        <img src="{{ setting()->logo ? asset('uploads/' . setting()->logo) : asset('backend/assets/img/logo.png') }}"
+                            class="brand_logo" alt="Logo">
+                        {{-- <img src="{{ asset('backend') }}/assets/img/logo.png"  --}}
+        
                     </div>
                 </div>
                 <div class="d-flex justify-content-center form_container">

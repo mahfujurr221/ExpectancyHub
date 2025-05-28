@@ -4,8 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    {{-- <title>English Scanner | {{ ucfirst(explode('.', Route::currentRouteName())[0]) }}</title> --}}
-    <title>English Scanner</title>
+    {{-- <title>Expectancy Hub | {{ ucfirst(explode('.', Route::currentRouteName())[0]) }}</title> --}}
+    <title>Expectancy Hub | {{ ucfirst(explode('.', Route::currentRouteName())[0]) }}</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 

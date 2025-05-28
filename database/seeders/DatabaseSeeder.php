@@ -26,7 +26,7 @@ class DatabaseSeeder extends Seeder
 
         //create owner
         Owner::create([
-            'name' => 'Shamser Sarder',
+            'name' => 'Muaz Bin Amir',
             'designation' => 'Chairman',
             'file_url' => 'uploads/owner/1736959259.jpeg',
             'qualification' => 'BA in English(1st),MA in English, BEd(1st), MSS(1st),MEd(3.10-DU) Master Trainer in English (Trained by British council)',
@@ -35,14 +35,13 @@ class DatabaseSeeder extends Seeder
 
         //create headline
         Headline::create([
-            'name' => 'IELTS বিষয়ক সকল অরিজিনাল বই সংগ্রহ করুন রকমারি ডট কম থেকে। IELTS বইসমূহ হাতে পেয়ে মূল্য পরিশোধের সুবিধাসহ অফারভেদে উপভোগ করুন ফ্রি শিপিং এবং সর্বোচ্চ ছাড়!',
-            'status' => 1,
+            'name' => 'Expectancy Hub',
         ]);
 
         //create banner
         Banner::create([
-            'title' => 'Learn English online – with the worlds English experts',
-            'small_title' => 'Study English online with us',
+            'title' => 'Banner Title',
+            'small_title' => 'Banner Small Title',
             'status' => 1,
             'image_url' => 'uploads/banner/1735580037.6772d985b8734.jpg',
         ]);
@@ -61,9 +60,9 @@ class DatabaseSeeder extends Seeder
             'fname' => 'Super',
             'lname' => 'Admin',
             'type' => 'supper-admin',
-            'email' => 'supper-admin@expectancyhub.com',
+            'email' => 'admin@gmail.com',
             'phone' => '00000000000',
-            'password' => bcrypt('supperadmin1234'),
+            'password' => bcrypt('admin'),
         ]);
 
         // Creating developer user
