@@ -191,6 +191,34 @@
             </li>
         @endcanany
 
+        @canany(['list-country', 'create-country'])
+            <li class="nav-item">
+                <a class="nav-link {{ Route::is('countries.*') ? '' : 'collapsed' }}" data-bs-target="#countries-nav"
+                    data-bs-toggle="collapse" href="#">
+                    <i class="bi bi-people-fill"></i><span>Countries</span><i class="bi bi-chevron-down ms-auto"></i>
+                </a>
+                <ul id="countries-nav" class="nav-content collapse {{ Route::is('countries.*') ? 'show' : '' }}"
+                    data-bs-parent="#sidebar-nav">
+                    @can('create-country')
+                        <li>
+                            <a href="{{ route('countries.create') }}"
+                                class="{{ Route::currentRouteName() == 'countries.create' ? 'active nav-link' : '' }}">
+                                <i class="bi bi-circle"></i><span>Add User</span>
+                            </a>
+                        </li>
+                    @endcan
+                    @can('list-country')
+                        <li>
+                            <a href="{{ route('countries.index') }}"
+                                class="{{ Route::currentRouteName() == 'countries.index' ? 'active nav-link' : '' }}">
+                                <i class="bi bi-circle"></i><span>Countries List</span>
+                            </a>
+                        </li>
+                    @endcan
+                </ul>
+            </li>
+        @endcanany
+
         @can('update-setting')
             <li class="nav-heading text-info">User & Role Management ------------------------</li>
         @endcan

@@ -3,7 +3,8 @@
 
   <div class="d-flex align-items-center justify-content-between">
     <a href="{{ route('dashboard') }}" class="logo d-flex align-items-center">
-      <img src="{{ asset('/uploads/logo.jpg') }}" alt="Logo">
+      {{-- <img src="{{ asset('/uploads/logo.jpg') }}" alt="Logo"> --}}
+      <img src="{{ asset('/uploads/' . setting()->logo) }}" alt="Logo" class="img-fluid">
       <span class="d-none d-lg-block logo-orange">Expectancy</span><span class="d-none d-lg-block logo-info">Hub</span>
     </a>
     <i class="bi bi-list toggle-sidebar-btn"></i>

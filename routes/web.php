@@ -16,6 +16,7 @@ use App\Http\Controllers\Backend\BlogVideoController;
 use App\Http\Controllers\Backend\PermissionController;
 use App\Http\Controllers\Backend\SuccessStoryController;
 use App\Http\Controllers\Backend\OwnerController;
+use App\Http\Controllers\CountryController;
 
 ////////////////////////////// Backend Route ///////////////////////////////////
 
@@ -29,7 +30,6 @@ Route::middleware('auth')->prefix('back')->group(function () {
 
     //success story
     Route::resource('success-story', SuccessStoryController::class)->except(['show']);
-
 
     //headline
     Route::resource('headline', HeadlineController::class)->except(['show']);
@@ -46,6 +46,9 @@ Route::middleware('auth')->prefix('back')->group(function () {
 
     //payments
     Route::resource('payments', PaymentController::class)->except(['show']);
+
+    //countries
+    Route::resource('countries', CountryController::class)->except(['show']);
 
 
     ///////////////////////////// Roles And Permission Route ///////////////////////////////////

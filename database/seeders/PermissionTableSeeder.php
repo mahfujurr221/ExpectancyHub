@@ -62,6 +62,12 @@ class PermissionTableSeeder extends Seeder
             'edit-video',
             'delete-video',
 
+            //country
+            'list-country',
+            'create-country',
+            'edit-country',
+            'delete-country',
+
 
             //profile
             'list-profile',

@@ -48,13 +48,10 @@ class HomeController extends Controller
     }
 
   
-
-  
     //branches
     public function branches()
     {
         $branches = Branch::latest()->get();
-        // dd($branches);
         return view('frontend.pages.branches', compact('branches'));
     }
 
