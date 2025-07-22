@@ -38,16 +38,14 @@
 
                     <div class="mb-3 form-group">
                         <label for="file_url">Image </label>
-                        <input type="file" name="file_url" class="form-control mb-3" >
+                        <input type="file" name="file_url" class="mb-3 form-control" >
                         @if (isset($data->file_url))
                             <img src="{{ asset($data->file_url) }}" alt="Image" class="img-fluid" style="max-width: 100px;">
-
                         @endif
                         @error('file_url')
                         <span class="text-danger">{{ $message }}</span>
                         @enderror
                     </div>
-
 
                     <div class="mb-3 form-group">
                         <label for="qualification">Qualifications <span class="text-danger">*</span></label>

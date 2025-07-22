@@ -203,7 +203,7 @@
                         <li>
                             <a href="{{ route('countries.create') }}"
                                 class="{{ Route::currentRouteName() == 'countries.create' ? 'active nav-link' : '' }}">
-                                <i class="bi bi-circle"></i><span>Add User</span>
+                                <i class="bi bi-circle"></i><span>Add Country</span>
                             </a>
                         </li>
                     @endcan

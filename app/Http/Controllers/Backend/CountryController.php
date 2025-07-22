@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\backend;
 
+use App\Http\Controllers\Controller;
 use App\Models\Country;
 use Illuminate\Http\Request;
 
@@ -38,8 +39,12 @@ class CountryController extends Controller
         ]);
 
         $flagPath = null;
+
         if ($request->hasFile('flag')) {
-            $flagPath = $request->file('flag')->store('flags', 'public');
+            $file = $request->file('flag');
+            $fileName = time() . '.' . $file->getClientOriginalExtension();
+            $file->move(public_path('uploads/countries/'), $fileName);
+            $flagPath = 'uploads/countries/' . $fileName;
         }
 
         Country::create([
@@ -69,19 +74,31 @@ class CountryController extends Controller
             'flag' => 'nullable|image|max:2048',
         ]);
 
+        $flagPath = $country->flag;
+
         if ($request->hasFile('flag')) {
-            $flagPath = $request->file('flag')->store('flags', 'public');
-            $country->flag = $flagPath;
+            // Delete the old flag if it exists
+            if ($country->flag && file_exists(public_path($country->flag))) {
+                unlink(public_path($country->flag));
+            }
+
+            $file = $request->file('flag');
+            $fileName = time() . '.' . $file->getClientOriginalExtension();
+            $file->move(public_path('uploads/countries/'), $fileName);
+            $flagPath = 'uploads/countries/' . $fileName;
         }
 
         $country->update([
             'name' => $request->name,
             'code' => $request->code,
             'description' => $request->description,
+            'flag' => $flagPath,
         ]);
+
         toast('Country Updated Successfully!', 'success');
         return redirect()->route('countries.index');
     }
+
 
     // Delete country
     public function destroy(Country $country)

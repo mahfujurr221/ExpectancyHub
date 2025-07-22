@@ -100,8 +100,6 @@
         });
     </script>
 
-
-
     @stack('scripts')
 
 </body>

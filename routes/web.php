@@ -16,7 +16,7 @@ use App\Http\Controllers\Backend\BlogVideoController;
 use App\Http\Controllers\Backend\PermissionController;
 use App\Http\Controllers\Backend\SuccessStoryController;
 use App\Http\Controllers\Backend\OwnerController;
-use App\Http\Controllers\CountryController;
+use App\Http\Controllers\Backend\CountryController;
 
 ////////////////////////////// Backend Route ///////////////////////////////////
 

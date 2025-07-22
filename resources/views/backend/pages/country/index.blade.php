@@ -39,9 +39,9 @@
                 <td>{{ $key + 1 }}</td>
                 <td>
                     @if($data->flag)
-                    <img src="{{ asset('storage/' . $data->flag) }}" alt="{{ $data->name }}" width="50">
+                    <img src="{{ asset( $data->flag)}}" alt="Flag" width="50">
                     @else
-                    <img src="{{ asset('images/default-flag.png') }}" alt="Default Flag" width="50">
+                    <img src="{{ asset('uploads/user.png') }}" alt="Default Flag" width="50">
                     @endif
                 </td>
                 <td>{{ $data->name }}</td>
