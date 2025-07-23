@@ -24,16 +24,25 @@
             <div class="mb-3 col-6">
                 <label>Name <span class="text-danger">*</span></label>
                 <input type="text" name="name" class="form-control" value="{{ $country->name }}" required>
+                @error('name')
+                <span class="text-danger">{{ $message }}</span>
+                @enderror
             </div>
 
             <div class="mb-3 col-6">
                 <label>Code <span class="text-danger">*</span></label>
                 <input type="text" name="code" class="form-control" value="{{ $country->code }}" required>
+                @error('code')
+                <span class="text-danger">{{ $message }}</span>
+                @enderror
             </div>
 
             <div class="mb-3">
                 <label>Description</label>
                 <textarea name="description" class="form-control">{{ $country->description }}</textarea>
+                @error('description')
+                <span class="text-danger">{{ $message }}</span>
+                @enderror
             </div>
 
             <div class="mb-5 row">
@@ -47,6 +56,9 @@
                         alt="Flag Preview"
                         style="{{ $country->flag ? '' : 'display:none;' }} max-height: 100px;">
                 </div>
+                @error('flag')
+                <span class="text-danger">{{ $message }}</span>
+                @enderror
             </div>
 
             <div class="py-3 text-center card-footer">

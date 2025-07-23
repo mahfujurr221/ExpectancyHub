@@ -17,6 +17,8 @@ use App\Http\Controllers\Backend\PermissionController;
 use App\Http\Controllers\Backend\SuccessStoryController;
 use App\Http\Controllers\Backend\OwnerController;
 use App\Http\Controllers\Backend\CountryController;
+use App\Http\Controllers\Backend\ServiceController;
+use App\Http\Controllers\Backend\SubServiceController;
 
 ////////////////////////////// Backend Route ///////////////////////////////////
 
@@ -49,6 +51,12 @@ Route::middleware('auth')->prefix('back')->group(function () {
 
     //countries
     Route::resource('countries', CountryController::class)->except(['show']);
+
+    //services
+    Route::resource('services', ServiceController::class)->except(['show']);
+
+    //sub-services
+    Route::resource('sub-services', SubServiceController::class)->except(['show']);
 
 
     ///////////////////////////// Roles And Permission Route ///////////////////////////////////

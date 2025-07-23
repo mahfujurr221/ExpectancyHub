@@ -46,7 +46,7 @@
                 </td>
                 <td>{{ $data->name }}</td>
                 <td>
-                    {{ Str::limit($data->description, 100) }}
+                    {{ Str::limit(strip_tags($data->description), 100) }}
                 </td>
                 <td style="min-width: 100px" class="text-center">
                     <a class="btn btn-info btn-sm" href="{{ route('countries.edit', $data->id) }}" title="Edit">

@@ -68,6 +68,17 @@ class PermissionTableSeeder extends Seeder
             'edit-country',
             'delete-country',
 
+            //service
+            'list-service',
+            'create-service',
+            'edit-service',
+            'delete-service',
+
+            //sub-service
+            'list-sub-service',
+            'create-sub-service',
+            'edit-sub-service',
+            'delete-sub-service',
 
             //profile
             'list-profile',
