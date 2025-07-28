@@ -221,13 +221,13 @@
 
         @canany(['list-service', 'create-service', 'list-subservice', 'create-subservice'])
         <li class="nav-item">
-            <a class="nav-link {{ Route::is('services.*') || Route::is('subservices.*') ? '' : 'collapsed' }}"
+            <a class="nav-link {{ Route::is('services.*') || Route::is('sub-services.*') ? '' : 'collapsed' }}"
                 data-bs-target="#services-nav" data-bs-toggle="collapse" href="#">
                 <i class="bi bi-gear-fill"></i><span>Services</span><i class="bi bi-chevron-down ms-auto"></i>
             </a>
 
             <ul id="services-nav"
-                class="nav-content collapse {{ Route::is('services.*') || Route::is('subservices.*') ? 'show' : '' }}"
+                class="nav-content collapse {{ Route::is('services.*') || Route::is('sub-services.*') ? 'show' : '' }}"
                 data-bs-parent="#sidebar-nav">
 
                 @can('create-service')

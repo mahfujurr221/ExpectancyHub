@@ -49,8 +49,13 @@ class SubServiceController extends Controller
         return redirect()->route('sub-services.index');
     }
 
-    public function edit(SubService $subservice)
+    public function edit($id)
     {
+        $subservice = SubService::findOrFail($id);
+        if (!$subservice) {
+            toast('Sub-Service Not Found!', 'error');
+            return redirect()->route('sub-services.index');
+        }
         $services = Service::all();
         return view('backend.pages.sub-service.edit', compact('subservice', 'services'));
     }

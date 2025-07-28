@@ -29,7 +29,7 @@
                         <td>{{ $sub->service->name ?? 'N/A' }}</td>
                         <td>
                             @if ($sub->image)
-                                <img src="{{ asset('uploads/subservices/' . $sub->image) }}" alt="Image" width="80">
+                                <img src="{{ asset( $sub->image) }}" alt="Image" width="80">
                             @else
                                 <span class="text-muted">No Image</span>
                             @endif

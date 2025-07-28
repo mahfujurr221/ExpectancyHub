@@ -18,9 +18,9 @@
                 <select name="service_id" class="form-control" required>
                     <option value="">Select Service</option>
                     @foreach($services as $service)
-                        <option value="{{ $service->id }}" {{ $subservice->service_id == $service->id ? 'selected' : '' }}>
-                            {{ $service->name }}
-                        </option>
+                    <option value="{{ $service->id }}" {{ $subservice->service_id == $service->id ? 'selected' : '' }}>
+                        {{ $service->name }}
+                    </option>
                     @endforeach
                 </select>
                 @error('service_id')
@@ -36,14 +36,6 @@
                 @enderror
             </div>
 
-            <div class="mb-3 col-md-6">
-                <label>Image</label>
-                <input type="file" name="image" class="form-control" id="subServiceImageInput">
-                @error('image')
-                <span class="text-danger">{{ $message }}</span>
-                @enderror
-            </div>
-
             <div class="mb-3 col-md-12">
                 <label>Description</label>
                 <textarea name="description" class="form-control summernote">{{ $subservice->description }}</textarea>
@@ -53,12 +45,21 @@
             </div>
 
             <div class="mb-3 col-md-6">
+                <label>Image</label>
+                <input type="file" name="image" class="form-control" id="subServiceImageInput">
+                @error('image')
+                <span class="text-danger">{{ $message }}</span>
+                @enderror
+            </div>
+            <div class="mb-3 col-md-6">
                 @if($subservice->image)
-                    <img id="subServiceImagePreview" src="{{ asset('uploads/subservices/'.$subservice->image) }}" alt="Image Preview" style="max-height:100px;">
+                <img id="subServiceImagePreview" src="{{ asset($subservice->image) }}" alt="Image Preview"
+                    style="max-height:100px;">
                 @else
-                    <img id="subServiceImagePreview" src="#" alt="Image Preview" style="display:none; max-height:100px;">
+                <img id="subServiceImagePreview" src="#" alt="Image Preview" style="display:none; max-height:100px;">
                 @endif
             </div>
+
         </div>
 
         <div class="text-center card-footer">

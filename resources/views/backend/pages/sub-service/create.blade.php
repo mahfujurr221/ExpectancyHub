@@ -33,18 +33,18 @@
                 @enderror
             </div>
 
-            <div class="mb-3 col-md-6">
-                <label>Image</label>
-                <input type="file" name="image" class="form-control" id="subServiceImageInput">
-                @error('image')
-                <span class="text-danger">{{ $message }}</span>
-                @enderror
-            </div>
-
             <div class="mb-3 col-md-12">
                 <label>Description</label>
                 <textarea name="description" class="form-control summernote"></textarea>
                 @error('description')
+                <span class="text-danger">{{ $message }}</span>
+                @enderror
+            </div>
+
+            <div class="mb-3 col-md-6">
+                <label>Image</label>
+                <input type="file" name="image" class="form-control" id="subServiceImageInput">
+                @error('image')
                 <span class="text-danger">{{ $message }}</span>
                 @enderror
             </div>
